@@ -12,6 +12,10 @@ function App() {
     setGreetMsg(await invoke("greet", { name }));
   }
 
+  async function logMessage() {
+    invoke("log_message", { message: "Hello from the frontend!" });
+  }
+
   return (
     <main className="container">
       <h1>Welcome to Tauri + React</h1>
@@ -44,6 +48,10 @@ function App() {
         <button type="submit">Greet</button>
       </form>
       <p>{greetMsg}</p>
+
+      <div className="row">
+        <button onClick={logMessage}>Log a Message</button>
+      </div>
     </main>
   );
 }
