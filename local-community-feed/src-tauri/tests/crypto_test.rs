@@ -1,4 +1,4 @@
-use local_community_feed_lib::crypto::{Identity, verify};
+use local_community_feed_lib::crypto::{verify, Identity};
 
 #[test]
 fn test_sign_and_verify() {
